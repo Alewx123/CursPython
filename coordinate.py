@@ -1,5 +1,4 @@
 # Curs 4 OOP
-
 class Coordinate(object):
     """ O coordonata e compusa din x si y """
 
