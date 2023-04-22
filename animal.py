@@ -1,4 +1,5 @@
 # Curs 4 Clase in clase
+
 class Animal(object):
     """ O coordonata e compusa din x si y """
 
