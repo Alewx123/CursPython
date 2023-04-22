@@ -2,7 +2,6 @@
 
 print("Curs 3")
 
-
 # #Structuri repetitive
 # all_choises = [i for i in range(10)]
 #
