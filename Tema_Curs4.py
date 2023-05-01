@@ -65,7 +65,15 @@ print(f"a + d = {a.__add__(d)}")
 
 print()
 
-# print(f"inversul lui a = {a.inverse()}")
-# print(f"inversul lui b = {b.inverse()}")
-# print(f"inversul lui c = {c.inverse()}")
-# print(f"inversul lui d = {d.inverse()}")
+print(f"a - b = {a.__sub__(b)}")
+print(f"a - c = {a.__sub__(c)}")
+print(f"b - c = {b.__sub__(c)}")
+print(f"a - d = {a.__sub__(d)}")
+
+print()
+
+print(f"inversul lui a = {a.inverse()}")
+print(f"inversul lui b = {b.inverse()}")
+print(f"inversul lui c = {c.inverse()}")
+print(f"inversul lui d = {d.inverse()}")
+
