@@ -1,24 +1,25 @@
 # Sa se scrie o clasa Fractie(numarator,numitor) care sa implementeze urmatoarele metode:
-# - __init__ : instantiem numaratorul si numitorul
-# - __str__ : afisam "numarator/numitor"
-# - __add__ : returnam o noua functie care reprezinta adunarea
-# - __sub__ : returnam o noua functie care reprezinta scaderea
-# inverse : returneaza o noua fractie (inversa fractiei)
 import math
 
 
 class Fractie(object):
     """ O fractie este compusa din numarator si numitor """
 
+    # - __init__ : instantiem numaratorul si numitorul
     def __init__(self, numarator, numitor):
         """" Setam valorile numarator si numitor """
         self.numarator = numarator
         self.numitor = numitor
 
+    # - __str__ : afisam "numarator/numitor"
     def __str__(self):
         """ Returnam self ca si string """
-        return f"{self.numarator}/{self.numitor}"
+        if self.numitor == 1:
+            return f"{self.numarator}"
+        else:
+            return f"{self.numarator}/{self.numitor}"
 
+    # - __add__ : returnam o noua functie care reprezinta adunarea
     def __add__(self, other):
         numarator = self.numarator * other.numitor + self.numitor * other.numarator
         numitor = self.numitor * other.numitor
@@ -28,6 +29,7 @@ class Fractie(object):
         else:
             return Fractie(numarator // divizor, numitor // divizor)
 
+    # - __sub__ : returnam o noua functie care reprezinta scaderea
     def __sub__(self, other):
         numarator = self.numarator * other.numitor - self.numitor * other.numarator
         numitor = self.numitor * other.numitor
@@ -37,13 +39,9 @@ class Fractie(object):
         else:
             return Fractie(numarator // divizor, numitor // divizor)
 
+    # inverse : returneaza o noua fractie (inversa fractiei)
     def inverse(self):
-        numarator = self.numitor
-        numitor = self.numarator
-        if numitor == 1:
-            return f"{numarator}"
-        else:
-            return f"{numarator}/{numitor}"
+        return Fractie(self.numitor, self.numarator)
 
 
 a = Fractie(1, 2)
@@ -76,4 +74,3 @@ print(f"inversul lui a = {a.inverse()}")
 print(f"inversul lui b = {b.inverse()}")
 print(f"inversul lui c = {c.inverse()}")
 print(f"inversul lui d = {d.inverse()}")
-
